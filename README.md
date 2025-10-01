@@ -41,6 +41,24 @@ git clone --recurse-submodules https://github.com/google/leveldb.git
 
 This project supports [CMake](https://cmake.org/) out of the box.
 
+### Build in MacOS(updated for personal host)
+
+Quick start:
+```bash
+# In project root directory
+mkdir build && cd build
+
+
+cmake .. \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_CXX_STANDARD=17 \
+  -DCMAKE_CXX_STANDARD_REQUIRED=ON \
+  -DCMAKE_CXX_EXTENSIONS=OFF \
+  -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+
+cmake --build . -j16
+```
+
 ### Build for POSIX
 
 Quick start:
